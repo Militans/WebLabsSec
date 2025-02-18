@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    line-height: 1.5;
+    font-size: 1rem;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header
+{
+    height: 7vh;
+    background: silver;
+    padding: 5vh 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 10vh;
+    height: 10vh;
+}
+
+
+.navigation{
+    padding: 1vh 10vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+}
+.nav_for_main{
+    display: inline-block;
+    background: silver;
+    padding: 1vh 1vh;
+    align-items: center;
+    max-width: min-content;
+    white-space: nowrap;
+    height: max-content;
+}
+
+.list{
+    list-style-type: none;
+}
+.list li {
+    margin-bottom: 10px;
+}
+
+.Label{
+    color: black;
+    text-decoration-line: none;
+}
+
+.total{
+    background: silver;
+    display: flex;
+    min-height: 100vh;
+
+    }
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+/*.list:not(:last-child) {*/
+/*    margin: 10px; !* Добавляем расстояние между всеми кнопками, кроме последней *!*/
+/*}*/
+.button-link2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: yellowgreen;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-link2:hover {
+    background-color: #aaffaa; /* Цвет чуть светлее yellowgreen */
+}
+
+
+

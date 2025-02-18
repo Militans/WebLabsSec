@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Лэндинг
+{% endblock %}
+
+{% block body %}
+    <div class="obertka">
+        <h1 style="text-align: center"> Лэндинг </h1>
+        <h2 style="text-align: center">Ознакомьтесь с другими магазинами нашей компании</h2>
+        <div class="product">
+            <a href="https://vk.com/id211096093" class="product-link" alt="First">
+                <img src="{{ url_for('static', filename='first_shop.png') }}">
+                <p style="text-align: center"> Магазин бытовой техники </p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="https://vk.com/id211096093" class="product-link">
+                <img src="{{ url_for('static', filename='second_shop.png') }}" alt="Second">
+                <p style="text-align: center"> Онлайн школа </p>
+            </a>
+        </div>
+    </div>
+{% endblock %}

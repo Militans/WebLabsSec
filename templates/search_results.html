@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Результаты поиска{% endblock %}
+
+{% block body %}
+    <div class="obertka">
+    <h1>Результаты поиска</h1>
+    <div class="silver>">
+    {% if products %}
+            {% for product in products %}
+                    <a href="{{ url_for('elem', name=product.category_for_site, id=product.id) }}" class="product-link">
+                        <div class="product">
+                            <div class="description-title">Наименование</div>
+                            <p style="text-align: center">{{ product.name }}</p>
+                            <img src="{{ url_for('static', filename='uploads/'+ product.category_for_site + '/' + product.image_url) }}"
+                                 alt="{{ product.name }}">
+                            <div class="specification-title">Характеристики товара</div>
+                            <p style="text-align: center">{{ product.characteristics }}</p>
+
+                            <div class="details-title">Подробное описание товара</div>
+                            <p style="text-align: center">{{ product.detailed_description }}</p>
+                            <div class="cost">Цена товара</div>
+                            <p style="text-align: center" class="price_2">{{ product.cost }}</p>
+                            </div>
+
+                    </a>
+            {% endfor %}
+    {% else %}
+        <p>По вашему запросу "{{ search_query }}" ничего не найдено.</p>
+    {% endif %}
+    </div>
+    </div>
+{% endblock %}

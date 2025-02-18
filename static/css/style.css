@@ -1,0 +1,19 @@
+@font-face {
+    font-family: OpenSans1;
+    src: url('../fonts/OpenSans/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: OpenSans2;
+    src: url('../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+p.new {
+        font-family: OpenSans1;
+    }
+
+nav.authentication{
+        font-family: OpenSans2;
+    }
+h1.all_label{
+    font-family: OpenSans1;
+}
+

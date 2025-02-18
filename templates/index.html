@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{%block title%}
+DIAMOND
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="silver">
+        <div class="glhf">
+            <h2 class="Hello">Добро пожаловать!</h2>
+            <p>Мы с величайшим удовольствием объявляем, что наш прекрасный ювелирный магазин неуклонно расширяется,
+                принося вам пятеричное увеличение коллекции уникальных украшений. В этом захватывающем периоде мы
+                стремимся предоставить вам ещё больше вариантов, чтобы каждый момент вашей жизни мог быть подчеркнут
+                блеском изысканных драгоценностей. Погрузитесь в наш мир роскоши и выбора, где каждая деталь приковывает
+                взгляд и подчеркивает ваш неповторимый стиль. Мы рады сообщить, что наш ювелирный магазин продолжает
+                расширяться и предлагать вам больше уникальных украшений. Вот некоторые из наших последних показателей
+                расширения:
+            </p>
+            <table class="table1">
+                <tr>
+                    <th rowspan="2">Расширение магазина</th>
+                    <td>Новые коллекции украшений</td>
+                    <td>Приход 5 новых дизайнов</td>
+                </tr>
+                <tr>
+                    <td>Количество филиалов</td>
+                    <td>Открыто 3 новых магазина</td>
+                </tr>
+                <tr>
+                    <td>Удовлетворенные клиенты</td>
+                    <td>Уровень удовлетворенности клиентов составляет 95%</td>
+                    <td>Мы ценим наших клиентов и продолжаем их радовать</td>
+                </tr>
+            </table>
+            <ol>
+                <li>
+                    <b><i>Драгоценные металлы</i></b>
+                    <ul class="lister">
+                        <li>Золото 18К</li>
+                        <li>Платина</li>
+                        <li>Серебро 925</li>
+                    </ul>
+                </li>
+                <li>
+                    <b><i>Виды украшений</i></b>
+                    <ul class="lister">
+                        <li>Кольца</li>
+                        <li>Ожерелья</li>
+                        <li>Браслеты</li>
+                        <li>Серьги</li>
+                        <li>Подвески</li>
+                    </ul>
+                </li>
+                <li>
+                    <b><i>Коллекции</i></b>
+                    <ul class="lister">
+                        <li>Коллекция "Летнее сияние"</li>
+                        <li>Коллекция "Вечерний блеск"</li>
+                        <li>Коллекция "Романтический ветер"</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="new">
+            <div class="slider-container2">
+                    <div class="slider-wrapper2">
+                        <div class="slide2">
+                            <img src="{{ url_for('static', filename='ring.png') }}" alt="Кольцо" class="ring">
+                        </div>
+                        <div class="slide2">
+                            <img src="{{ url_for('static', filename='dimamond_elem.png') }}" alt="Кольцо" class="ring">
+                        </div>
+                        <div class="slide2">
+                            <img src="{{ url_for('static', filename='last.png') }}" alt="Кольцо" class="ring">
+                        </div>
+                    </div>
+                </div>
+{#            <img src="{{ url_for('static', filename='ring.png') }}" alt="Кольцо" class="ring">#}
+            <div class="new3">
+            <h3>
+                Наши поставщики:
+            </h3>
+            <a href="http://www.bril.ru">
+                <img src="{{ url_for('static', filename="logo1.png")}}" >
+            </a>
+            <a href="https://awros.ru">
+                <img src="{{ url_for('static', filename="logo2.png")}}" >
+            </a>
+            <a href="http://skygem.ru">
+                <img src="{{ url_for('static', filename="logo3.png")}}" >
+            </a>
+
+        </div>
+        </div>
+
+    </div>
+{%  endblock %}

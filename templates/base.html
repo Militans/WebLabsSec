@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ine Shidory">
+    <meta name="description" content="Laboratory site">
+    <meta name="keywords" content="test, helloworld">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- Подключение Bootstrap JS (включая Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script src="{{ url_for('static', filename='js/for_bucket.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/for_slider.js') }}"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="s{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}" >
+    <link rel="mask-icon" href="{{ url_for('static', filename='safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_land.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/catalogue.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_contacts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_bucket.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_about.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/for_team.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<section class="header_wrap">
+    <header class="header">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename="label.png") }}" class="logo">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename="logo.png") }}" class="logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="/index" class="Label">
+            <h1 class="all_label">DIAMOND</h1>
+        </a>
+        <nav class="authentication">
+            <a href="/user_profile" class="button-link" >
+                {% if 'current_user' in session %}
+                    {{ session['current_user'].username }}
+                {% else %}
+                    Войти/Авторизироваться
+                {% endif %}
+            </a>
+        </nav>
+    </header>
+    <div class="navigation">
+        <a href="/team" class="button-link">Наша команда</a>
+        <a href="/about" class="button-link">О бренде</a>
+        <a href="/promotions" class="button-link">Акции</a>
+        <a href="/landing" class="button-link">Лендинг</a>
+    </div>
+</section>
+<div class="total">
+    <div class="nav_for_main">
+        <ol class="list">
+            <li><a href="/" class="button-link">Главная</a></li>
+            <li><a href="/catalogue" class="button-link">Каталог</a></li>
+            <li><a href="/contacts" class="button-link">Контакты</a></li>
+        </ol>
+    </div>
+    {% block body %}{% endblock %}
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h2>О нас:</h2>
+            <p>Краткая история нашей компании, основанной в 2005 году. Мы стремимся предоставлять высококачественные продукты и услуги, удовлетворяя потребности наших клиентов.</p>
+            <p><b>Наши ценности:</b> Инновации, качество, ответственность.</p>
+
+        </div>
+        <div class="footer-section contact">
+            <h2>Контакты</h2>
+            <p>Email: hello@email.com</p>
+            <p>Телефон: +7 (123) 456-7890</p>
+
+        </div>
+        <div class="footer-section links">
+            <h2>Полезные ссылки</h2>
+            <ul>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Условия использования</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>2023 Diamond.</p>
+    </div>
+</footer>
+</body>
+</html>

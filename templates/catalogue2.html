@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Каталог
+{% endblock %}
+
+{% block body %}
+    <div class="obertka">
+        <div class="another2">
+            <h1>Каталог</h1>
+            <div class="search-container">
+                <form action="{{ url_for('catalog2') }}" method="get">
+                    <input type="text" name="search" placeholder="Поиск...">
+                    <button type="submit">Искать</button>
+                </form>
+            </div>
+        </div>
+        <div class="silver">
+            {% for product in products %}
+                <div class="product">
+                    <a href="{{ url_for('catalog_2', name=product.name) }}" class="product-link">
+                        <div class="product-title">{{ product.name_for_site }}</div>
+                        <img src="{{ product.image_url }}" alt="{{ product.name }}">
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+.employee-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 20px; /* Добавлен отступ для улучшенного визуального восприятия */
+}
+
+.employee-card img {
+  width: 100%;
+  height: auto;
+}
+
+.details {
+  padding: 16px;
+}
+
+.H2, .H3, .P {
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+.H2 {
+  font-size: 1.5em;
+}
+
+.H3 {
+  font-size: 1.2em;
+}
+
+.P {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Медиа-запрос для адаптивности */
+@media screen and (max-width: 600px) {
+  .employee-card {
+    width: 100%; /* Карточка занимает 100% ширины при узком экране */
+  }
+}
+
+.obertka_for_team {
+  display: flex;
+  overflow: auto;
+  flex-direction: row;
+  height: min-content;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

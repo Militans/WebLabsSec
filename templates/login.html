@@ -1,0 +1,92 @@
+<!-- login.html -->
+{% extends 'sec_base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="login">
+    <div class="login-header">
+        <h1>Login</h1>
+    </div>
+    <form method="post" action="{{ url_for('login') }}" class="login-form">
+        <h3>Username:</h3>
+        <input type="text" placeholder="Username" id="username" name="username" required/><br>
+        <h3>Password:</h3>
+        <input type="password" id="password" name="password" placeholder="Password" required/>
+        <br>
+        <input type="submit" value="Login" class="login-button"/>
+        <br>
+        <a href="{{ url_for('register') }}" class="sign-up">Sign Up!</a>
+        <br>
+        <h6 class="no-access">Can't access your account?</h6>
+    </form>
+</div>
+
+{% block messages %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            {% if category in ['success', 'info', 'error'] %}
+                <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                {% if category == 'success' %}
+                                    <h5 class="modal-title" id="successModalLabel">Успешно!</h5>
+                                {% elif category == 'error' %}
+                                    <h5 class="modal-title" id="successModalLabel">Ошибка!</h5>
+                                {% elif category == 'info' %}
+                                    <h5 class="modal-title" id="successModalLabel">Успешно!</h5>
+                                {% endif %}
+                            </div>
+                            <div class="modal-body">
+                                {{ message }}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#successModal').modal('show');
+                    });
+                </script>
+            {% else %}
+                <style>
+                    .alert-{{ category }} {
+                        display: none;
+                    }
+                </style>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+{% endblock %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $(document).ready(function () {
+            {% for category, message in messages %}
+                {% if category in ['success', 'info', 'error'] %}
+                    {% if category == 'success' %}
+                        $('#successModal .modal-body').text('{{ message }}');
+                        $('#successModal').modal('show');
+                    {% elif category == 'error' %}
+                        $('#errorModal .modal-body').text('{{ message }}');
+                        $('#errorModal').modal('show');
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        });
+        function showSuccessModal(message) {
+            $('#successModal .modal-body').text(message);
+            $('#successModal').modal('show');
+        }
+        function showErrorModal(message) {
+            $('#errorModal .modal-body').text(message);
+            $('#errorModal').modal('show');
+        }
+    </script>
+{% endblock %}

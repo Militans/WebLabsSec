@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Контакты
+{% endblock %}
+
+{% block body %}
+    <div class="obertka">
+        <div><h1>Напишите нам!</h1></div>
+        <div class="for1">
+            <form action="/contacts" method="post">
+                <div class='silver2'>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Тема:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+            <img src="{{ url_for('static', filename="Grafick.png") }}" class="ring">
+        </div>
+        <div class="new_class">
+            <h2>Адрес</h2>
+            <p>Контактный номер телефона компании: +78003212212</p>
+            <p>Адрес: Москва, ул Академика Скрябина, д26</p>
+            <p>Email: info@mail.com</p>
+        </div>
+    </div>
+{% endblock %}

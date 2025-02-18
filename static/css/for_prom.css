@@ -1,0 +1,16 @@
+section {
+    margin: 20px 0;
+}
+
+h2 {
+    color: #3498db;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.promo-image {
+    max-width: 100%;
+    height: auto;
+}

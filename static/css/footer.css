@@ -1,0 +1,26 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px; /* Максимальная ширина контента внутри футера (замените на свой) */
+    margin: 0 auto; /* Центрирование контента внутри футера */
+}
+
+/* Дополнительные стили для структуры футера (опционально) */
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}

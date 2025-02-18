@@ -1,0 +1,39 @@
+<!-- user_profile.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block body %}
+    <div class="obertka">
+        <div><h2>Личный кабинет</h2></div>
+        <div><h3>Добро пожаловать, {{ username }}!</h3></div>
+        <div>
+            {% if user_data %}
+                <div class="obertka">
+                    <div class="another"> <h3>Ваши желания:</h3></div>
+                    <div class="silver">
+                    {% for data in user_data %}
+                        {% for product in product_data %}
+                            {% if data.id_item == product.id%}
+                                <div class="product">
+                                    <p style="text-align: center">{{ product.short_description }}</p><br>
+                                    <img src="{{ url_for('static', filename='uploads/' + product.category_for_site +'/' + product.image_url) }}" alt="{{ product.name }}"><br>
+                                    <p style="text-align: center">Количество: {{ data.quantity }}</p>
+                                    <p style="text-align: center">Общая стоимость: {{ data.quantity * product.cost }}</p>
+                                    <button class="button-link">Купить сейчас</button>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <p>Корзина пуста.</p>
+            {% endif %}
+        </div>
+        <form action="{{ url_for('logout') }}" class="glyphicon-log-out" method="post">
+            <input type="submit" value="Выйти из аккаунта">
+        </form>
+    </div>
+{% endblock %}

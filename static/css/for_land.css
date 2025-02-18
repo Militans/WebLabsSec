@@ -1,0 +1,9 @@
+.partner{
+    width: 20%;
+    height: auto;
+
+    .partner img{
+        width: 100%;
+        height: auto;
+    }
+}

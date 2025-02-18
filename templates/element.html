@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ elemement.name }}
+{% endblock %}
+{% block body %}
+    <div class="obertka">
+    <div>
+        <h1>Каталог</h1>
+    </div>
+        <div class="silver">
+                <div class="product">
+                    <div class="description-title">Наименование</div>
+                    <p style="text-align: center">{{elemement.name}}</p>
+                    <img src="{{ url_for('static', filename='uploads/' + name +'/' +  elemement.image_url) }}" alt="{{ elemement.name }}">
+                    <div class="specification-title">Параметры</div>
+                    <p style="text-align: center">{{ elemement.characteristics }}</p>
+
+                    <div class="details-title">Подробное описание товара</div>
+                    <p style="text-align: center">{{ elemement.detailed_description }}</p>
+                    <div class="cost">Цена товара</div>
+                    <p style="text-align: center" class="price_2">{{ elemement.cost }}</p>
+                    <div class="buttons">
+                        <button class="button-link">Купить сейчас</button>
+                        <form id="addToCartForm" action="{{ url_for('add_to_cart', product_id=elemement.id) }}" method="post">
+                            <input type="hidden" name="product_id" value="{{ elemement.id }}">
+                            <input type="hidden" name="quantity" value="1">
+                            <button class="button-link2">В корзину</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% block messages %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                {% if category in ['success', 'info', 'error'] %}
+                    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    {% if category == 'success' %}
+                                        <h5 class="modal-title" id="successModalLabel">Успешно!</h5>
+                                    {% elif category == 'error' %}
+                                        <h5 class="modal-title" id="successModalLabel">Ошибка!</h5>
+                                    {% elif category == 'info' %}
+                                        <h5 class="modal-title" id="successModalLabel">Успешно!</h5>
+                                    {% endif %}
+                                </div>
+                                <div class="modal-body">
+                                    {{ message }}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $('#successModal').modal('show');
+                        });
+                    </script>
+                {% else %}
+                    <style>
+                        .alert-{{ category }} {
+                            display: none;
+                        }
+                    </style>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    {% endblock %}
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script>
+        $(document).ready(function () {
+            {% for category, message in messages %}
+                {% if category in ['success', 'info', 'error'] %}
+                    {% if category == 'success' %}
+                        $('#successModal .modal-body').text('{{ message }}');
+                        $('#successModal').modal('show');
+                    {% elif category == 'error' %}
+                        $('#errorModal .modal-body').text('{{ message }}');
+                        $('#errorModal').modal('show');
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        });
+        function showSuccessModal(message) {
+            $('#successModal .modal-body').text(message);
+            $('#successModal').modal('show');
+        }
+        function showErrorModal(message) {
+            $('#errorModal .modal-body').text(message);
+            $('#errorModal').modal('show');
+        }
+    </script>
+{% endblock %}
+

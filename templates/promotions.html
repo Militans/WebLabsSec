@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+{% block body %}
+    <div class="obertka2">
+
+        <div class="for1">
+            <div class="product">
+                <h2 style="text-align: center">Текущая акция: Скидка 20% на весь ассортимент!</h2>
+                <div style="text-align: justify">
+                    <p>
+                        Уважаемые клиенты, мы рады предложить вам уникальную возможность приобрести товары из нашего ассортимента
+                        со скидкой 20%! Это отличная возможность пополнить свою коллекцию украшений или выбрать подарок для
+                        близких.
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename="discount.jpg") }}" alt="">
+            </div>
+        </div>
+        <div class="for1">
+            <div class="product">
+                <h2 style="text-align: center">Бесплатная доставка при покупке от 40000&#8381;</h2>
+                <div style="text-align: justify">
+                    <p >
+                        Сделайте заказ на сумму от 40000&#8381;, и мы доставим ваши покупки бесплатно! Не упустите шанс сэкономить на
+                        доставке и получить качественные товары от DIAMOND.
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename="free_deliver.jpg") }}" alt="">
+            </div>
+        </div>
+    </div>
+{% endblock %}
