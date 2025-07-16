@@ -88,7 +88,6 @@ class contact(db.Model):
 
 @login_manager.user_loader
 def load_user(user_id):
-    # Замените эту часть кода на логику загрузки пользователя из базы данных
     user = Users.query.get(user_id)
     return User(user.id, user.username) if user else None
 
